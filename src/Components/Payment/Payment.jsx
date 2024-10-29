@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { cartContext } from '../../Context/CartContext'
 import axios from 'axios'
 import ema from '../../assets/imgs/ema.png'
@@ -6,8 +6,12 @@ import bkash from '../../assets/imgs/bkash.png'
 import visa from '../../assets/imgs/visa.png'
 import master from '../../assets/imgs/master.png'
 import fire from '../../assets/imgs/fire.png'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 export default function Payment() {
+
+    
+
+    console.log(window.location.href)    
    const navigate= useNavigate()
 
     
@@ -17,6 +21,9 @@ export default function Payment() {
 const [isLoad, setIsLoad] = useState(false)    
 const [isEmpty, setIsEmpty] = useState(false)    
 const [isOnline, setIsOnline] = useState(false)  
+
+
+
 
 
     function payCashOrder(body) {
@@ -42,8 +49,11 @@ const [isOnline, setIsOnline] = useState(false)
 
     }
     function payOnline(body) {
+        if(window.location.href == 'https://sarahheshamali2.github.io/payment') {
+
+        }
         setIsLoad(true)
-        axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:5173
+        axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${window.location.href ==  'https://sarahheshamali2.github.io/payment' ?'https://sarahheshamali2.github.io'  : 'http://localhost:5173'}
 ` , {
     body
 } , {
@@ -55,7 +65,7 @@ const [isOnline, setIsOnline] = useState(false)
     
     // localStorage.setItem('userId',JSON.stringify(resp.data.data.user))
 
-    window.open(resp.data.session.url,'_self')
+    // window.open(resp.data.session.url,'_self')
     setIsLoad(false)
 
 
