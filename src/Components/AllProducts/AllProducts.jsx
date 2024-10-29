@@ -30,7 +30,7 @@ function handleAddToWishList(id,e) {
   return <>
   
   { <section className='allProducts   myContainer md:mt-[100px] mt-[60px]'>
-    <div className="grid lg:grid-cols-5 grid-cols-2 md:grid-cols-3">
+    <div className="grid lg:grid-cols-5 grid-cols-2 md:grid-cols-3 ">
     {products?.map((products)=>     <div key={products._id} className="product py-5 my-3 ">
  <div className="wrapper group overflow-hidden relative">
  <div onClick={()=>addProductToCart(products._id)} className="bg-[#db4444a1] text-white rounded p-2 flex items-center justify-center absolute top-1/2 -translate-y-1/2 end-0 left-0 z-40 opacity-0 group-hover:opacity-100 transition-[3000ms] cursor-pointer">

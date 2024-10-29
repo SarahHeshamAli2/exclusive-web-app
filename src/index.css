@@ -68,8 +68,7 @@ margin:0 45px ;
 
 .myContainer{
     width: 90%;
-    margin-right: auto;
-    margin-left: auto;
+  margin: auto;
 }
 
 .loading{
