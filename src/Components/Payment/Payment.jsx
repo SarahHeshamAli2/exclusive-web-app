@@ -65,7 +65,7 @@ const [isOnline, setIsOnline] = useState(false)
     
     // localStorage.setItem('userId',JSON.stringify(resp.data.data.user))
 
-    // window.open(resp.data.session.url,'_self')
+    window.open(resp.data.session.url,'_self')
     setIsLoad(false)
 
 
