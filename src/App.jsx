@@ -34,6 +34,7 @@ const router = createBrowserRouter(
     {path : '*' , element : <NotFound/>},
     { index : true , element : <Home/>},
     { path : 'home' , element : <Home/>},
+    { path : 'exclusive-web-app/' , element : <Home/>},
     { path : 'product/:id' , element : <ProductDetails/>},
     { path : 'contact' , element : <ContactUs/>},
     { path : 'ourstory' , element : <OurStory/>},
