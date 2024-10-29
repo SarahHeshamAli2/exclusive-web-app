@@ -1,0 +1,138 @@
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    border-bottom: 1px solid black;
+}
+
+.test {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.slick-prev , .slick-next{
+    position: absolute;
+    left: 85%;
+    top: 0;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: #F5F5F5;
+}
+
+
+.slick-prev:hover , .slick-prev:focus , .slick-next:hover ,.slick-next:focus  {
+    background-color: #F5F5F5;
+}
+.slick-next{
+margin:0 45px ;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 25px;
+    color: black;
+    opacity: 1;
+}
+.slick-prev:before {
+    font-family: "Font Awesome 5 Free";
+   content: "\f177";
+   display: inline-block;
+   padding-right: 3px;
+   vertical-align: middle;
+   font-weight: 900;
+
+}
+.slick-next:before {
+    font-family: "Font Awesome 5 Free";
+   content: "\f178";
+   display: inline-block;
+   padding-right: 3px;
+   vertical-align: middle;
+   font-weight: 900;
+
+}
+
+@media screen and (max-width:700px) {
+  .slick-prev , .slick-next {
+    left: 70%;
+  }
+}
+
+.myContainer{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.loading{
+    z-index: 9999999;
+}
+
+.loader {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 32px 0 #fff, -32px 0 #fff;
+    position: relative;
+    animation: flash 0.5s ease-out infinite alternate;
+  }
+  
+  @keyframes flash {
+    0% {
+      background-color: #FFF2;
+      box-shadow: 32px 0 #FFF2, -32px 0 #FFF;
+    }
+    50% {
+      background-color: #FFF;
+      box-shadow: 32px 0 #FFF2, -32px 0 #FFF2;
+    }
+    100% {
+      background-color: #FFF2;
+      box-shadow: 32px 0 #FFF, -32px 0 #FFF2;
+    }
+  }
+        
+
+
+  .bottom {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+  }
+  
+
+  .asterisk_input::after {
+    content:" *"; 
+    color: #e32;
+    position: absolute; 
+    margin: 0px 0px 0px -20px; 
+    
+    padding: 0 }
+
+    .activeBtn {
+      background-color: #DB4444;
+      color:white;
+      border: unset;
+    }
+
+    .focus\:ring-2:focus:focus {
+    box-shadow: unset;
+   }
+
+   input[type='radio'] {
+    accent-color: #232323;
+}
+
+nav {
+z-index: 99999999;
+}
